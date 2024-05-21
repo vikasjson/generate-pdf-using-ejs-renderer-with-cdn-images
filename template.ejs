@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-container {
+            page-break-after: always;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>This Is Test Pdf Generator</h1>
+<p>previously known for its high levels of militancy, achieved a historic milestone with its highest-ever voter turnout
+    on Monday. The seat, where the first parliamentary polls were held here in 1967, recorded a healthy turnout of 59
+    per cent in the fifth phase of Lok Sabha elections, this time.</p>
+<% imageUrls.forEach(url => { %>
+    <div class="image-container">
+        <img width="100" height="100" src="<%= url %>"/>
+    </div>
+<% }); %>
+</body>
+</html>
